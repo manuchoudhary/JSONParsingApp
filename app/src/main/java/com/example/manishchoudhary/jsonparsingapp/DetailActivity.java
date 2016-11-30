@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class DetailActivity extends Activity {
 
-    TextView txtArtistName, txtCollectionName, txtTrackName, txtCollectionPrice, txtTrackPrice, txtReleaseDate;
+    TextView txtArtistName, txtCollectionName, txtTrackName, txtCollectionPrice, txtTrackPrice;
     Track item;
 
     @Override
@@ -24,7 +24,6 @@ public class DetailActivity extends Activity {
         txtTrackName = (TextView)findViewById(R.id.txtTrackName);
         txtCollectionPrice = (TextView)findViewById(R.id.txtCollectionPrice);
         txtTrackPrice = (TextView)findViewById(R.id.txtTrackPrice);
-        txtReleaseDate = (TextView)findViewById(R.id.txtReleaseDate);
         Intent intent = getIntent();
         populateData(intent);
     }
@@ -37,6 +36,5 @@ public class DetailActivity extends Activity {
         txtArtistName.setText(track.getArtistName());
         txtCollectionPrice.setText("$ " + String.valueOf(track.getCollectionPrice()));
         txtTrackPrice.setText("$ " + String.valueOf(track.getTrackPrice()));
-        txtReleaseDate.setText("" + print.format(track.getReleaseDate()));
     }
 }

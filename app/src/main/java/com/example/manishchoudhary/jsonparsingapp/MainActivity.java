@@ -2,7 +2,6 @@ package com.example.manishchoudhary.jsonparsingapp;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -81,12 +80,11 @@ public class MainActivity extends Activity {
                 item.setArtworkUrl30(feedObj.getString("artworkUrl30"));
                 item.setCollectionPrice(feedObj.getDouble("collectionPrice"));
                 item.setTrackPrice(feedObj.getDouble("trackPrice"));
-                item.setReleaseDate(sdf.parse(feedObj.getString("releaseDate")));
                 item.setArtistName(feedObj.getString("artistName"));
                 if(feedObj.has("collectionName")){
                     item.setCollectionName(feedObj.getString("collectionName"));
                 }else {
-                    item.setTrackName(feedObj.getString("trackName"));
+                    item.setCollectionName(feedObj.getString("trackName"));
                 }
                 item.setTrackName(feedObj.getString("trackName"));
                 trackItems.add(item);

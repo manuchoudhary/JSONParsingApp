@@ -8,18 +8,16 @@ import java.util.Date;
 
 public class Track implements Serializable {
     private double collectionPrice, trackPrice;
-    private Date releaseDate;
     private String artistName, collectionName, trackName, artworkUrl30;
 
     public Track() {
     }
 
-    public Track(String artworkUrl30, double collectionPrice, double trackPrice, Date releaseDate,
+    public Track(String artworkUrl30, double collectionPrice, double trackPrice,
                  String artistName, String collectionName, String trackName) {
         this.artworkUrl30 = artworkUrl30;
         this.collectionPrice = collectionPrice;
         this.trackPrice = trackPrice;
-        this.releaseDate = releaseDate;
         this.artistName = artistName;
         this.collectionName = collectionName;
         this.trackName = trackName;
@@ -45,18 +43,12 @@ public class Track implements Serializable {
         return trackName;
     }
 
-    public Date getReleaseDate() { return releaseDate; }
-
     public String getArtworkUrl30() { return artworkUrl30; }
 
     public void setCollectionPrice(double collectionPrice) { this.collectionPrice = collectionPrice; }
 
     public void setTrackPrice(double trackPrice) {
         this.trackPrice = trackPrice;
-    }
-
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
     }
 
     public void setArtistName(String artistName) {
