@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
             for (int i = 0; i < len; i++) {
                 JSONObject feedObj = (JSONObject) feedArray.get(i);
                 Track item = new Track();
-                item.setArtworkUrl30(feedObj.getString("artworkUrl30"));
+                item.setArtworkUrl30(feedObj.getString("artworkUrl60"));
                 item.setCollectionPrice(feedObj.getDouble("collectionPrice"));
                 item.setTrackPrice(feedObj.getDouble("trackPrice"));
                 item.setArtistName(feedObj.getString("artistName"));
